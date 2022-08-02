@@ -611,10 +611,7 @@ const App = () => {
           contractABI,
           signer
         );
-        let mint = await pisocoContract.giftXerian(
-          contractAddress,
-          newTokenURI
-        );
+        let mint = await pisocoContract.giftNFT(contractAddress, newTokenURI);
         await mint.wait();
         console.log("Airdrop minting...", mint);
       } else {
